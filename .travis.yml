@@ -8,6 +8,8 @@ python:
   - pypy
 
 install:
+  # The setuptools on some travis containers are too old, need to manually upgrade
+  - pip install --upgrade setuptools
   - pip install -e .[test]
 
 script:
