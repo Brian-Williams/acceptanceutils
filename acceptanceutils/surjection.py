@@ -14,10 +14,6 @@ strongly suggest any set of release tests does not use these tools unless absolu
 from __future__ import absolute_import
 from itertools import chain, repeat
 import random
-# try:
-#     from itertools import izip_longest as zip_longest
-# except ImportError:
-#     from itertools import zip_longest
 
 
 class NonLocals(object):

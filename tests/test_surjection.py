@@ -1,4 +1,4 @@
-from testutils import surjection
+from acceptanceutils import surjection
 
 one = ([1], 1)
 two = ([1, 2], 2)
