@@ -11,7 +11,6 @@ Wrote specifically for a test that had >20 options with several valid parameters
 combination in smoke testing took too long. This provides acceptable general coverage for most smoke tests. I would
 strongly suggest any set of release tests does not use these tools unless absolutely required.
 """
-from __future__ import absolute_import
 from itertools import chain, repeat
 import random
 
@@ -67,13 +66,13 @@ def zip_longest_defaults(*args):
 
 def surjective_options(*options):
     """
-    Give several options and return a list of options that includes every option at least once.
+    Give several options and return an iterator of options that includes every option at least once.
 
     If a test takes a while to complete and it has several options many valid inputs that need to be tested running
     every iteration could extend past a reasonable runtime. This will ensure every option is tested at least once. No
-    matter the number of input lists the returned list will be the length of the list with the most parameters.
+    matter the number of input lists the returned lists will be the length of the input with the most options.
 
-    :param options: Tuple with (<list>, fill value)
+    :param options: Tuple with (list, fill value)
     :return: List of shuffled surjective options
     """
     for p, default in options:
@@ -85,5 +84,4 @@ def surjective_options(*options):
         # The above would never produce a list where both options are False.
         except TypeError:
             pass
-    surjective_list = list(zip_longest_defaults(*options))
-    return surjective_list
+    return zip_longest_defaults(*options)
