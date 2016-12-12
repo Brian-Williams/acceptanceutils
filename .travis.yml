@@ -8,7 +8,7 @@ python:
   - pypy
 
 install:
-  - pip install . -r testing-requirements.txt flake8
+  - pip install -e .[test]
 
 script:
   - py.test
