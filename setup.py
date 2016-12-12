@@ -90,7 +90,7 @@ setup(
     # for example:
     # $ pip install -e .[dev,test]
     extras_require={
-        'test': test_reqs,
+        'test': list(test_reqs),
     },
 
     # If there are data files included in your packages that need to be
