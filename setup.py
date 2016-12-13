@@ -63,11 +63,11 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: pypy',
+        'Programming Language :: Python :: Implementation :: PyPy',
     ],
 
     # What does your project relate to?
-    keywords='testing',
+    keywords='testing acceptance',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
