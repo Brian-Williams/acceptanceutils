@@ -54,3 +54,6 @@ class TestSurjectiveOptions(object):
         no_shuffle_tuple = (tuple(big_string), None)
 
         assert so(shuffle_list, shuffle=True) != so(no_shuffle_tuple, shuffle=True)
+
+    def test_no_input(self):
+        list(so())
