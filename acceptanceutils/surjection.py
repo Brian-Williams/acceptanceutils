@@ -64,7 +64,7 @@ def zip_longest_defaults(*args):
         pass
 
 
-def surjective_options(*options, shuffle=False):
+def surjective_options(shuffle=False, *options):
     """
     Give several options and return an iterator of options that includes every option at least once.
 
