@@ -1,2 +1,0 @@
-pytest>=2.9.0
-flake8
