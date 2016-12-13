@@ -9,7 +9,11 @@ install:
   # The setuptools on some travis containers are too old, need to manually upgrade
   - pip install --upgrade setuptools
   - pip install -e .[test]
+  - pip install codecov pytest-cov
 
 script:
-  - py.test
+  - py.test --cov=./
   - flake8 .
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
