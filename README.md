@@ -11,4 +11,6 @@ touch each option once without taking the time to test all combinations.
 
 Surjection in this always means minimally surjective.
 
-![Set theory is fun](/images/Surjection.svg.png?raw=true "Surjection")
+
+<!--- The first 'images' is the branch name, the second is the folder in that branch --->
+![Set theory is fun](/../images/images/Surjection.svg.png?raw=true "Surjection")
