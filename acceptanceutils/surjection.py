@@ -64,7 +64,7 @@ def zip_longest_defaults(*args):
         pass
 
 
-def surjective_options(shuffle=False, *options):
+def surjective_options(*options, **shuffle_only):
     """
     Give several options and return an iterator of options that includes every option at least once.
 
@@ -72,11 +72,15 @@ def surjective_options(shuffle=False, *options):
     every iteration could extend past a reasonable runtime. This will ensure every option is tested at least once. No
     matter the number of input lists the returned lists will be the length of the input with the most options.
 
+
+    Treat this function as if it's inputs were (*options, shuffle=False). **shuffle_only is purely for compatibility
+    reasons.
+
     :param options: Tuple with (list, fill value)
-    :param shuffle: Boolean on whether to shuffle the list or not
+    :param shuffle: Boolean to shuffle the list or not; This is required to be in **kwargs for 2.x compatibility
     :return: List of shuffled surjective options
     """
-    if shuffle:
+    if shuffle_only.pop('shuffle', False):
         for p, default in options:
             try:
                 random.shuffle(p)
@@ -86,4 +90,5 @@ def surjective_options(shuffle=False, *options):
             # The above would never produce a list where both options are False.
             except TypeError:
                 pass
+
     return zip_longest_defaults(*options)
