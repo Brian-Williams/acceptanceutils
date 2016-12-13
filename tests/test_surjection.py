@@ -41,16 +41,16 @@ class TestSurjectiveOptions(object):
         true_first = ((True, False), True)
         false_first = ((False, True), True)
 
-        lis = list(so(true_first, false_first))
+        lis = list(so(true_first, false_first, shuffle=True))
         for i, li in enumerate(lis):
             assert li[0] == true_first[0][i]
             assert li[1] == false_first[0][i]
 
-    def test_shuffling(self):
+    def test_partial_shuffling(self):
         size = 1000
         big_string = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(size))
 
-        shuffle = (list(big_string), None)
-        no_shuffle = (tuple(big_string), None)
+        shuffle_list = (list(big_string), None)
+        no_shuffle_tuple = (tuple(big_string), None)
 
-        assert so(shuffle) != so(no_shuffle)
+        assert so(shuffle_list, shuffle=True) != so(no_shuffle_tuple, shuffle=True)
