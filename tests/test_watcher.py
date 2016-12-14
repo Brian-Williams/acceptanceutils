@@ -1,5 +1,4 @@
-from six import with_metaclass
-import sys
+from future.utils import with_metaclass
 from acceptanceutils.watcher import SubClassWatcher
 
 
@@ -7,7 +6,7 @@ class Watched(with_metaclass(SubClassWatcher, object)):
     pass
 
 
-def test_print_output(capsys): # or use "capfd" for fd-level
+def test_print_output(capsys):
 
     class WatchMe(Watched):
         pass
