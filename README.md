@@ -15,3 +15,7 @@ Surjection in this always means minimally surjective.
 
 <!--- The first 'images' is the branch name, the second is the folder in that branch --->
 ![Set theory is fun](/../images/images/Surjection.svg.png?raw=true "Surjection")
+
+### Watcher
+
+SubClassWatcher is useful for confirming hierarchies when specs require it.
