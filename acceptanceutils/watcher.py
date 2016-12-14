@@ -8,5 +8,5 @@ class SubClassWatcher(type):
     """
     def __init__(cls, name, bases, cls_dict):
         if len(cls.mro()) > 2:
-            logging.debug("{} was subclassed by {}".format(cls.__name__, name))
+            print("{} was subclassed by {}".format(cls.__bases__[0].__name__, name))
         super(SubClassWatcher, cls).__init__(name, bases, cls_dict)

@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/Brian-Williams/acceptanceutils.svg?branch=master)](https://travis-ci.org/Brian-Williams/acceptanceutils)
+[![Build Status](https://travis-ci.org/Brian-Williams/acceptanceutils.svg?branch=master)](https://travis-ci.org/Brian-Williams/acceptanceutils) [![codecov](https://codecov.io/gh/Brian-Williams/acceptanceutils/branch/master/graph/badge.svg)](https://codecov.io/gh/Brian-Williams/acceptanceutils)
+
 
 # Acceptance testing tools for use in unit/acceptance testing
 
